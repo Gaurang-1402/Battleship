@@ -1,4 +1,3 @@
-# Assignment 6 - Battleship
 
 ### BACKGROUND
 
@@ -129,8 +128,6 @@ The value passed to the `name` parameter is valid when it is one of the keys sto
 
 The ship's `sunk` attribute is initialized to `False` in the `__init__()` method definition. 
 
-Once the `Ship` class' `__init__()` method has been implemented, try submitting your `battleship.py` file to Gradescope to see if your implementation passes the **Step A** tests. Once your program passes the **Step A** tests, proceed to **Step B**.
-
 <a name="stepB"></a>
 #### Step B - Enable Game initialization
  
@@ -178,7 +175,6 @@ J &rarr; | . | . | . | .| . | . | . | . | . | . |
 
 Implement the `Game` `__init__()` method such that it initializes the `board` attribute to an empty `dict`. Implement the `Game` `initialize_board()` method to populate the `board` `dict` as described above. After implementing the `Game` `initialize_board()` method, call the `initialize_board()` method on the `Game` instance within the `Game` `__init__()` method definition. Implementation of the `Game` `__init__()` method continues in **Step C** and **Step D**.
 
-After defining the methods `__init__()` and `initialize_board()` in the `Game` class, try submitting your `battleship.py` file to Gradescope to see if your implementation passes the **Step B** tests. Once your program passes the **Step B** tests, proceed to **Step C**.
 
 <a name="stepC"></a>
 #### Step C - Identify in-bounds and non-overlapping ship positions
@@ -294,7 +290,6 @@ False
 
 The `overlaps_ship()` method requires checking the keys of the `positions` dictionary of previously placed ships that have been added to the `ships` list of the `Game` object for possible overlapping board positions. Keep in mind that if a ship has been placed in the game, the ship will already have been added to the `ships` list for the `Game` object. You may be asking, when did we place ships on the `board`. The answer is that we have not yet implemented this part of the program. Placing ships on the board is functionality that will be implemented in `Step D` and `Step E`. However, for implementing the `overlaps_ship()` method, assume that the `Game` instances `ships` list contains ships 0 or more ships that have been placed in a particular game. You have defined all of the data attributes required to implement the `in_bounds()` and `overlaps_ship()` methods despite not yet having implemented the functionality for placing ships and adding the ships to the `ships` list of the `Game` object.
 
-After defining the methods `in_bounds()` and `overlaps_ship()` methods in the `Game` class, try submitting your `battleship.py` file to Gradescope to see if your implementation passes the **Step C** tests. Once your program passes the **Step C** tests, proceed to **Step D**.
 
 <a name="stepD"></a>
 #### Step D -  Identify valid ship placement positions
@@ -409,8 +404,6 @@ Therefore, a method invocation of `place_ship()` in this situation would return 
 
 Your implementation of `place_ship()` will utilize method invocations of `in_bounds()` and `overlaps_ship()` as these methods implement the logic required for determining whether or not a ship of a given size, a proposed starting position, and a given orientation can be properly placed. 
 
-Once the `place_ship()` method has been implemented for the `Game` class, try submitting your `battleship.py` file to Gradescope to see if your implementation passes the **Step D** tests. Once your program passes the **Step D** tests, proceed to **Step E**.
-
 <a name="stepE"></a>
 #### Step E - Add ships to the game
 
@@ -447,8 +440,6 @@ This process continues until a valid position and orientation is found for the s
 
 When an invocation of the `create_and_place_ships()` method is complete, all `Ship` objects for the game will have been instantiated and added to the game. Add a method invocation for `create_and_place_ships()` to the Game class' `__init__()` method to ensure that ships are created and placed every time a new game is created.
 
-After implementing the `create_and_place_ships()` method in the `Game` class, try submitting your `battleship.py` file to Gradescope to see if your implementation passes the **Step E** tests. Once your program passes the **Step E** tests, proceed to **Step F**.
-
 <a name="stepF"></a>
 #### Step F - Get player's guess
 
@@ -477,8 +468,6 @@ Enter a column: 4
 ```
 
 Notice that the prompt `Enter a row: ` is repeated until a valid `row` value is provided. The prompt `Enter a column: ` is not shown until a valid `row` has been provided. Once a valid `column` is provided, the method returns the position tuple.
-
-After implementing the `get_guess()` method in the `Game` class, try submitting your `battleship.py` file to Gradescope to see if your implementation passes the **Step F** tests. Once your program passes the **Step F** tests, proceed to **Step G**.
 
 <a name="stepG"></a>
 #### Step G - Check for successful hit
@@ -533,8 +522,6 @@ You sunk the destroyer!
 True
 ```
 
-After implementing the `check_guess()` method in the `Game` class, try submitting your `battleship.py` file to Gradescope to see if your implementation passes the **Step G** tests. Once your program passes the **Step G** tests, proceed to **Step H**.
-
 <a name="stepH"></a>
 #### Step H - Update the game based on user's guessed position
 
@@ -587,7 +574,6 @@ J &rarr; | . | . | o | .| . | . | . | . | . | . |
 
 A method invocation of `update_game()` that is passed `False` for the `guess_status` parameter when the position on the board has been updated in a previous round does not update the board again.
 
-After implementing the `update_game()` method in the `Game` class, try submitting your `battleship.py` file to Gradescope to see if your implementation passes the **Step H** tests. Once your program passes the **Step H** tests, proceed to **Step I**.
 
 <a name="stepI"></a>
 #### Step I - Check for a completed game
@@ -652,7 +638,6 @@ the output is `SORRY! NO GUESSES LEFT.` with a return value of `True`. In most r
 False
 ```
 
-When the `is_complete()` method in the `Game` class has been defined, try submitting your `battleship.py` file to Gradescope to see if your implementation passes the **Step I** tests. Once your program passes the **Step I** tests, proceed to **Step J**.
 
 <a name="stepJ"></a>
 #### Step J - Allow user to play again
@@ -868,11 +853,6 @@ J . . . . . . . . . .
 Enter a row:
 ```
 
-### EVALUATION
-
-This assignment will use Gradescope's Autograder tool. Therefore, you will receive immediate feedback when submitting this assignment. You should strive to have your submitted code pass all of the tests run by the Gradescope Autograder by the time you have completed **Step K**. 
-
-It is just as important to write clean and readable code as it is to write correct and functional code. A portion of your grade on this assignment will be based on how well you follow certain coding conventions. Make sure to follow the standards discussed in class, and before you submit your assignment, take a minute to review your code to check for stylistic issues like those mentioned below.
 
 #### Comments
 
@@ -914,12 +894,6 @@ Spaces should be used between operators and operands in the expressions written 
 Your program should not contain any constant numeric values. Constant variables are to be defined and used in place of hard-coding numeric constants into the program.
 
 <a name="submit"></a>
-### ASSIGNMENT SUBMISSION
 
-You should submit the following file on Gradescope (do not include any files not included in the list below):
-
-* **battleship.py**
-
-The Autograder will assign points to passed tests. These results should be used as a guide for keeping you on track towards an implementation of this assignment that meets all of the requirements laid out above.
 
 Good luck!
