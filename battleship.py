@@ -1,10 +1,6 @@
 # Author: Gaurang Ruparelia
 # Assignment #6 - Battleship
-# Date due: 2020-12-04
-# I pledge that I have completed this assignment without
-# collaborating with anyone else, in conformance with the
-# NYU School of Engineering Policies and Procedures on
-# Academic Misconduct.
+
 
 import random
 
